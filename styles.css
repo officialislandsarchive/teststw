@@ -162,3 +162,52 @@ body {
     color: #ff8a00; /* Coin value color */
     font-size: 16px;
 }
+
+/* Add these styles to your existing CSS file */
+
+.main-content {
+    padding: 20px;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.featured-items-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.featured-item {
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    flex: 1 1 200px; /* Each item takes up an equal amount of space */
+}
+
+.featured-item:hover {
+    transform: translateY(-5px);
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.featured-item-name {
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.featured-coin-value {
+    color: #ff8a00;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+
