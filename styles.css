@@ -132,47 +132,38 @@ body {
 .close {
     color: #aaa;
     float: right;
-    font-size: 28px;
+    font-size: 36px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .close:hover,
 .close:focus {
     color: #fff;
     text-decoration: none;
-    cursor: pointer;
-}
-
-.modal-title {
-    text-align: center;
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.modal-items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
 }
 
 .item-box {
-    border: 1px solid #555;
+    background-color: #222;
+    border: 2px solid #333;
     border-radius: 10px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
 }
 
 .item-box:hover {
     transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.2);
+    background: #444;
+}
+
+.item-details {
+    display: flex;
+    flex-direction: column;
 }
 
 .item-name {
-    display: block;
     font-weight: bold;
     font-size: 18px;
     margin-bottom: 10px;
