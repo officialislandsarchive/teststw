@@ -171,11 +171,11 @@ function handleSearch() {
         })
     }
 
-    openModelFromArray(results, keyword);
+    openModelFromArray(results);
     console.log(results);
 }
 
-function openModelFromArray(array, kw) {
+function openModelFromArray(array) {
 
     modal.style.display = "block";
 
@@ -199,7 +199,7 @@ function openModelFromArray(array, kw) {
         list.appendChild(itemBox);
     })
 
-    document.getElementById("modalTitle").textContent = "Results For: " + kw;
+    document.getElementById("modalTitle").textContent = "Results";
 }
 
 function getCoinValue(name) {
@@ -221,12 +221,4 @@ function getCoinValue(name) {
     }
 }
 
-searchButton.onclick = handleSearch;
-
-searchEntry.onkeydown = function(event) {
-    if (event.key == "Enter") {
-        handleSearch();
-
-        console.log("tested")
-    }
-}
+searchButton.onclick = handleSearch
