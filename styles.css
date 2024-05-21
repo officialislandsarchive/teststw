@@ -1,4 +1,3 @@
-/* General reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,28 +6,37 @@
 }
 
 body {
-    background: url('sky_background.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background: linear-gradient(to right, #1c1c1c, #2b2b2b);
     color: #fff;
     font-size: 16px;
     line-height: 1.6;
 }
 
-/* Header Styles */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
-    backdrop-filter: blur(10px);
-    border-bottom: 2px solid #fff; /* White border bottom */
+    padding: 20px 50px;
+    background: #444;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .title {
     font-size: 36px;
     font-weight: bold;
-    color: #fff;
+    background: linear-gradient(to right, #ff8a00, #e52e71);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #ff8a00, 0 0 20px #ff8a00, 0 0 30px #ff8a00, 0 0 40px #e52e71, 0 0 50px #e52e71, 0 0 60px #e52e71, 0 0 70px #e52e71;
+    }
+    to {
+        text-shadow: 0 0 20px #ff8a00, 0 0 30px #ff8a00, 0 0 40px #ff8a00, 0 0 50px #e52e71, 0 0 60px #e52e71, 0 0 70px #e52e71, 0 0 80px #e52e71;
+    }
 }
 
 .buttons-container-left {
@@ -38,7 +46,7 @@ body {
 
 .btn {
     padding: 10px 20px;
-    background: linear-gradient(to right, #ffcf00, #ff8c00); /* Gradient color */
+    background: linear-gradient(to right, #ff8a00, #e52e71);
     color: #fff;
     border: none;
     cursor: pointer;
@@ -64,7 +72,6 @@ body {
     border: none;
     width: 200px;
     transition: width 0.3s ease-in-out;
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
 }
 
 .search-bar:focus {
@@ -73,7 +80,7 @@ body {
 
 .search-btn {
     padding: 10px 20px;
-    background: linear-gradient(to right, #ffcf00, #ff8c00);
+    background: linear-gradient(to right, #ff8a00, #e52e71);
     color: white;
     border: none;
     border-radius: 30px;
@@ -87,7 +94,6 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Modal Styles */
 .modal {
     display: none;
     position: fixed;
@@ -97,30 +103,44 @@ body {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
 }
 
 .modal-content {
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    background-color: #333;
     margin: 10% auto;
     padding: 20px;
-    border: 1px solid #fff;
+    border: 1px solid #888;
     width: 80%;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    animation: slide-down 0.5s ease-in-out;
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .close {
-    color: #fff;
+    color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-    cursor: pointer;
 }
 
 .close:hover,
 .close:focus {
-    color: #ffcf00; /* Yellow color on hover */
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .modal-title {
@@ -138,17 +158,17 @@ body {
 }
 
 .item-box {
-    border: 1px solid #fff;
+    border: 1px solid #555;
     border-radius: 10px;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
 }
 
 .item-box:hover {
     transform: translateY(-5px);
-    background: rgba(0, 0, 0, 0.8); /* Darker semi-transparent black background on hover */
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .item-name {
@@ -159,6 +179,6 @@ body {
 }
 
 .coin-value {
-    color: #ff8a00; /* Coin value color */
+    color: #ff8a00;
     font-size: 16px;
 }
