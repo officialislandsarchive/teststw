@@ -3,80 +3,91 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #0c0c0c;
+    background: url('sky_background.jpg') no-repeat center center fixed;
+    background-size: cover;
     color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
+/* Header Styles */
 .header {
-    background-color: #333;
-    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid #fff; /* White border bottom */
 }
 
 .title {
-    font-size: 24px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
 }
 
-.search-container {
+.buttons-container-left {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: linear-gradient(to right, #ffcf00, #ff8c00); /* Gradient color */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.search-container-right {
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
 .search-bar {
     padding: 10px;
+    border-radius: 30px;
     border: none;
-    border-radius: 20px;
-    margin-right: 10px;
     width: 200px;
+    transition: width 0.3s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+}
+
+.search-bar:focus {
+    width: 300px;
 }
 
 .search-btn {
     padding: 10px 20px;
+    background: linear-gradient(to right, #ffcf00, #ff8c00);
+    color: white;
     border: none;
-    background-color: #ff8a00;
-    color: #fff;
-    border-radius: 20px;
+    border-radius: 30px;
     cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
 }
 
-.main-content {
-    padding: 20px;
-}
-
-.section {
-    margin-bottom: 40px;
-}
-
-.section-title {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.featured-items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.featured-item {
-    background-color: #333;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-.featured-item:hover {
+.search-btn:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
+/* Modal Styles */
 .modal {
     display: none;
     position: fixed;
@@ -85,57 +96,69 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
 }
 
 .modal-content {
-    background-color: #222;
-    margin: 20% auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    margin: 10% auto;
     padding: 20px;
+    border: 1px solid #fff;
     width: 80%;
-    max-width: 600px;
     border-radius: 10px;
-    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: #ccc;
-    font-size: 24px;
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
     cursor: pointer;
 }
 
+.close:hover,
+.close:focus {
+    color: #ffcf00; /* Yellow color on hover */
+}
+
 .modal-title {
-    font-size: 24px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
     margin-bottom: 20px;
 }
 
 .modal-items {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 20px;
 }
 
 .item-box {
-    background-color: #444;
-    padding: 20px;
+    border: 1px solid #fff;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-    cursor: pointer;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
 }
 
 .item-box:hover {
     transform: translateY(-5px);
+    background: rgba(0, 0, 0, 0.8); /* Darker semi-transparent black background on hover */
 }
 
 .item-name {
+    display: block;
     font-weight: bold;
+    font-size: 18px;
     margin-bottom: 10px;
 }
 
 .coin-value {
-    color: #ff8a00;
+    color: #ff8a00; /* Coin value color */
+    font-size: 16px;
 }
