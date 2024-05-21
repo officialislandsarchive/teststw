@@ -3,7 +3,7 @@ var modal = document.getElementById('myModal');
 function openModal(category) {
     modal.style.display = "block";
     var items = {
-        "crops": [
+ "crops": [
             { name: "Wheat", value: "10" },
             { name: "Tomato", value: "15" },
             { name: "Carrot", value: "20" },
