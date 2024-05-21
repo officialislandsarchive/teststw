@@ -59,6 +59,7 @@ body {
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
 }
 
+
 .modal {
     display: none;
     position: fixed;
@@ -119,11 +120,12 @@ body {
 
 .item-name {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
+    color: #ff8a00; /* Adjust the color */
     margin-bottom: 10px;
 }
 
 .coin-value {
     color: #ff8a00;
-    font-size: 16px;
+    font-size: 18px;
 }
