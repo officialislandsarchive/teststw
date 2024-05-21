@@ -1,8 +1,5 @@
 var modal = document.getElementById('myModal');
 var items = {
-    "crops": [
-        { name: "Wheat", value: "10" },
-        { name: "Tomato", value: "15" },
  "crops": [
         { name: "Wheat", value: "10" },
         { name: "Tomato", value: "15" },
@@ -173,24 +170,3 @@ function searchItems() {
         }
     }
 }
-
-// Function to add featured items to the main page
-function addFeaturedItems(category) {
-    var featuredContainer = document.querySelector(".featured-items-container");
-    var itemsHTML = '';
-
-    items[category].forEach(function(item) {
-        itemsHTML += `
-            <div class="featured-item">
-                <span class="featured-item-name">${item.name}</span>
-                <span class="featured-coin-value">Coin Value: ${item.value}</span>
-            </div>
-        `;
-    });
-
-    featuredContainer.innerHTML = itemsHTML;
-}
-
-// Add the call to addFeaturedItems() function for each category
-addFeaturedItems('crops');
-// Add for other categories as needed
