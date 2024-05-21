@@ -3,7 +3,7 @@ var items = {
     "crops": [
         { name: "Wheat", value: "10" },
         { name: "Tomato", value: "15" },
-        { name: "Carrot", value: "20" },
+  { name: "Carrot", value: "20" },
         { name: "Berry", value: "25" },
         { name: "Onion", value: "30" },
         { name: "Red Flowers", value: "35" },
