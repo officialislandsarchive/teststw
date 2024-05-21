@@ -7,7 +7,8 @@
 }
 
 body {
-    background: linear-gradient(to right, #0f4c75, #3b5998);
+    background: url('sky_background.jpg') no-repeat center center fixed;
+    background-size: cover;
     color: #fff;
     font-size: 16px;
     line-height: 1.6;
@@ -18,27 +19,16 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
-    background: #1b262c;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid #fff; /* White border bottom */
 }
 
 .title {
     font-size: 36px;
     font-weight: bold;
-    background: linear-gradient(to right, #f72585, #7209b7);
-    -webkit-background-clip: text;
-    color: transparent;
-    animation: glow 2s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-    from {
-        text-shadow: 0 0 10px #f72585, 0 0 20px #7209b7;
-    }
-    to {
-        text-shadow: 0 0 20px #f72585, 0 0 30px #7209b7;
-    }
+    color: #fff;
 }
 
 .buttons-container-left {
@@ -48,7 +38,7 @@ body {
 
 .btn {
     padding: 10px 20px;
-    background: linear-gradient(to right, #ff8a00, #e52e71);
+    background: linear-gradient(to right, #ffcf00, #ff8c00); /* Gradient color */
     color: #fff;
     border: none;
     cursor: pointer;
@@ -74,6 +64,7 @@ body {
     border: none;
     width: 200px;
     transition: width 0.3s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
 }
 
 .search-bar:focus {
@@ -82,7 +73,7 @@ body {
 
 .search-btn {
     padding: 10px 20px;
-    background: linear-gradient(to right, #ff8a00, #e52e71);
+    background: linear-gradient(to right, #ffcf00, #ff8c00);
     color: white;
     border: none;
     border-radius: 30px;
@@ -106,44 +97,30 @@ body {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.8);
-    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
 }
 
 .modal-content {
-    background-color: #1b262c;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
     margin: 10% auto;
     padding: 20px;
-    border: 1px solid #444;
+    border: 1px solid #fff;
     width: 80%;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    animation: slide-down 0.5s ease-in-out;
-}
-
-@keyframes slide-down {
-    from {
-        transform: translateY(-50%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
 }
 
 .close {
-    color: #aaa;
+    color: #fff;
     float: right;
     font-size: 28px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .close:hover,
 .close:focus {
-    color: #fff;
-    text-decoration: none;
-    cursor: pointer;
+    color: #ffcf00; /* Yellow color on hover */
 }
 
 .modal-title {
@@ -154,33 +131,34 @@ body {
 }
 
 .modal-items {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     gap: 20px;
-    padding: 10px;
 }
 
 .item-box {
-    border: 1px solid #555;
+    border: 1px solid #fff;
     border-radius: 10px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
 }
 
 .item-box:hover {
     transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.8); /* Darker semi-transparent black background on hover */
 }
 
 .item-name {
+    display: block;
     font-weight: bold;
     font-size: 18px;
     margin-bottom: 10px;
 }
 
 .coin-value {
-    color: #ff8a00;
+    color: #ff8a00; /* Coin value color */
     font-size: 16px;
 }
