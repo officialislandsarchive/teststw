@@ -121,6 +121,7 @@ body {
 .item-name {
     font-weight: bold;
     font-size: 18px;
+    color: #ff8a00; /* Adjust the color */
 }
 
 .coin-value {
