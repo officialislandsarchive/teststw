@@ -1,8 +1,16 @@
 var modal = document.getElementById('myModal');
-
-function openModal(category) {
-    modal.style.display = "block";
-    var items = {
+var items = {
+    "crops": [
+        { name: "Wheat", value: "10" },
+        { name: "Tomato", value: "15" },
+        { name: "Carrot", value: "20" },
+        { name: "Berry", value: "25" },
+        { name: "Onion", value: "30" },
+        { name: "Red Flowers", value: "35" },
+        { name: "Yellow Flowers", value: "40" },
+        { name: "Blue Flowers", value: "45" },
+        { name: "Tall Grass", value: "50" }
+    ],
  "crops": [
             { name: "Wheat", value: "10" },
             { name: "Tomato", value: "15" },
@@ -110,7 +118,10 @@ function openModal(category) {
             { name: "Iron Ore", value: "15" },
             { name: "Iron", value: "20" }
         ],
-    };
+};
+
+function openModal(category) {
+    modal.style.display = "block";
 
     var list = document.getElementById("modalItems");
     list.innerHTML = "";
