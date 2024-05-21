@@ -14,7 +14,7 @@ function openModal(category) {
             { name: "Blue Flowers", value: "45" },
             { name: "Tall Grass", value: "50" }
         ],
-    "blocks": [
+"blocks": [
             { name: "Stone Brick", value: "10" },
             { name: "Wood", value: "15" },
             { name: "Wood Plank", value: "20" },
@@ -109,8 +109,7 @@ function openModal(category) {
             { name: "Coal", value: "10" },
             { name: "Iron Ore", value: "15" },
             { name: "Iron", value: "20" }
-        ],
-    };
+        ],    };
 
     var list = document.getElementById("modalItems");
     list.innerHTML = "";
@@ -140,5 +139,22 @@ function closeModal() {
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
+    }
+}
+
+function searchItems() {
+    var input, filter, ul, li, span, i, txtValue;
+    input = document.getElementById('searchInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("modalItems");
+    li = ul.getElementsByClassName('item-box');
+    for (i = 0; i < li.length; i++) {
+        span = li[i].getElementsByClassName("item-name")[0];
+        txtValue = span.textContent || span.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
     }
 }
