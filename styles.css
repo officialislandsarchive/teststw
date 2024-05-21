@@ -114,17 +114,17 @@ body {
 
 .item-details {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
 }
 
 .item-name {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
     color: #ff8a00; /* Adjust the color */
+    margin-bottom: 10px;
 }
 
 .coin-value {
     color: #ff8a00;
-    font-size: 16px;
+    font-size: 18px;
 }
