@@ -1,5 +1,8 @@
 var modal = document.getElementById('myModal');
 var items = {
+    "crops": [
+        { name: "Wheat", value: "10" },
+        { name: "Tomato", value: "15" },
  "crops": [
         { name: "Wheat", value: "10" },
         { name: "Tomato", value: "15" },
@@ -120,9 +123,9 @@ var items = {
         ],
 };
 
-// Function to open modal and display items
 function openModal(category) {
     modal.style.display = "block";
+
     var list = document.getElementById("modalItems");
     list.innerHTML = "";
     items[category].forEach(function(item) {
@@ -144,12 +147,16 @@ function openModal(category) {
     document.getElementById("modalTitle").textContent = category.charAt(0).toUpperCase() + category.slice(1); // Capitalize first letter
 }
 
-// Function to close modal
 function closeModal() {
     modal.style.display = "none";
 }
 
-// Function to search items
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
 function searchItems() {
     var input, filter, ul, li, span, i, txtValue;
     input = document.getElementById('searchInput');
@@ -167,35 +174,23 @@ function searchItems() {
     }
 }
 
-// Function to add featured items
+// Function to add featured items to the main page
 function addFeaturedItems(category) {
-    var featuredContainer = document.getElementById("featuredItems");
-    featuredContainer.innerHTML = "";
+    var featuredContainer = document.querySelector(".featured-items-container");
+    var itemsHTML = '';
+
     items[category].forEach(function(item) {
-        var itemDiv = document.createElement("div");
-        itemDiv.classList.add("featured-item");
-
-        var itemName = document.createElement("span");
-        itemName.textContent = item.name;
-
-        var coinValue = document.createElement("span");
-        coinValue.textContent = "Coin Value: " + item.value;
-
-        itemDiv.appendChild(itemName);
-        itemDiv.appendChild(document.createElement("br"));
-        itemDiv.appendChild(coinValue);
-        
-        // Open modal with item details on click
-        itemDiv.addEventListener("click", function() {
-            openModal(category);
-        });
-
-        featuredContainer.appendChild(itemDiv);
+        itemsHTML += `
+            <div class="featured-item">
+                <span class="featured-item-name">${item.name}</span>
+                <span class="featured-coin-value">Coin Value: ${item.value}</span>
+            </div>
+        `;
     });
+
+    featuredContainer.innerHTML = itemsHTML;
 }
 
-// Add featured items on page load
-window.onload = function() {
-    addFeaturedItems("crops");
-    // Add for other categories as needed
-};
+// Add the call to addFeaturedItems() function for each category
+addFeaturedItems('crops');
+// Add for other categories as needed
