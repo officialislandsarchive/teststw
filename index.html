@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islands Inventory Catalog</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<div class="header">
+    <div class="title">Islands Archive Price Guide</div>
+    <div class="buttons-container-left">
+        <button class="btn" onclick="openModal('crops')">Crops</button>
+        <button class="btn" onclick="openModal('blocks')">Blocks</button>
+        <button class="btn" onclick="openModal('totems')">Totems</button>
+        <button class="btn" onclick="openModal('industrial')">Industrial</button>
+        <button class="btn" onclick="openModal('stations')">Stations</button>
+        <button class="btn" onclick="openModal('cooking')">Cooking</button>
+        <button class="btn" onclick="openModal('seeds')">Seeds</button>
+        <button class="btn" onclick="openModal('slimeIsland')">Slime Island</button>
+        <button class="btn" onclick="openModal('tools')">Tools</button>
+        <button class="btn" onclick="openModal('ore')">Ore</button>
+    </div>
+    <div class="search-container-right">
+        <input type="text" id="searchInput" onkeyup="searchItems()" placeholder="Search for items..." class="search-bar">
+        <button class="search-btn">Search</button>
+    </div>
+</div>
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <div id="modalItems" class="modal-items"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
