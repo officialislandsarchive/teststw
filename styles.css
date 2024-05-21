@@ -1,3 +1,168 @@
+Josh
+gotham1
+Online
+
+red — Today at 4:21 PM
+ik
+Josh — Today at 4:21 PM
+But nice
+red — Today at 4:21 PM
+didnt u fix it before
+thanks
+now
+we should
+link the dc server
+just make a place for socials
+like discord and yt
+Josh — Today at 4:26 PM
+And everything else
+red — Today at 4:26 PM
+i showed krish'
+whats ur best languagec
+css html or js
+Josh — Today at 4:27 PM
+i alr said
+brooo dont show anyone
+you messed up
+red — Today at 4:27 PM
+oh
+wait wer
+wait were
+Josh — Today at 4:28 PM
+ur not supose to show anyone
+red — Today at 4:28 PM
+o told himt o shush
+alr
+he saod
+he wont say nothing'
+and we dleeted msgs
+my bad
+no one will know
+whats next
+Josh — Today at 4:29 PM
+ok
+let me go look over what i want
+red — Today at 4:30 PM
+i dont see where
+Josh — Today at 4:30 PM
+ok first
+get the search bar to work when u hit enter
+red — Today at 4:30 PM
+bet
+Josh — Today at 4:30 PM
+and we need to fix the boxes
+red — Today at 4:30 PM
+wait do u know css
+html
+or js the best
+which one
+Josh — Today at 4:30 PM
+html
+red — Today at 4:30 PM
+oh
+ok
+css is prob my weakest
+Josh — Today at 4:31 PM
+im alr on it
+red — Today at 4:31 PM
+u do boxes
+u already fixed it to
+if u look up
+just repaste it
+Josh — Today at 4:31 PM
+what
+Image
+red — Today at 4:35 PM
+?
+Josh — Today at 4:35 PM
+thats just how much there is lol
+red — Today at 4:36 PM
+lol cause js is like the brains of the webpage
+also i did my task
+it works on enter or on click if the button
+send the repo again'
+Josh — Today at 4:37 PM
+why
+red — Today at 4:39 PM
+i lost it
+send the link
+also
+Image
+its green
+Josh — Today at 4:39 PM
+oh
+looks nice
+send me update code
+Josh — Today at 4:39 PM
+Im useing like 20 diffrent things
+red — Today at 4:41 PM
+ok i got all the code for it
+btw
+u got to change 1 thing in hml
+its one tag
+<input type="text" id="searchInput" placeholder="Search for items..." class="search-bar">
+replace with
+its oringial
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+Expand
+message.txt
+4 KB
+let modal = document.getElementById('myModal');
+let searchButton = document.getElementById("search");
+let searchEntry = document.getElementById("searchInput");
+
+let items = {
+    "crops": [
+Expand
+message.txt
+8 KB
+alr the html is about the same
+@Josh
+so just
+change that 1 tag
+btw can u fix that the search bar overlaps the buttons when i start typein
+Image
+Josh — Today at 4:44 PM
+im trying to fix the button problem rn hold on
+red — Today at 4:44 PM
+Ok
+Josh — Today at 4:45 PM
+i mean box but yk what i mean
+red — Today at 4:46 PM
+ye
+do u want to keep the glow or nah
+is it to much?
+Josh — Today at 4:47 PM
+its wtv
+also
+are we adding the thing were the webhook changes the item prices?
+red — Today at 4:48 PM
+well its not gonna be a webhook
+cause we want it to directly change the webpage
+Josh — Today at 4:48 PM
+i mean abot
+red — Today at 4:48 PM
+not to the dc
+Josh — Today at 4:48 PM
+i mean a bot
+red — Today at 4:48 PM
+oh
+where u can send a price from dc to the web?
+Josh — Today at 4:49 PM
+like /change price. ITEM: pink sticky gear, PRICE: 20,000
+something liek taht
+a bot
+red — Today at 4:49 PM
+ye
+﻿
+red
+creeper6876
+ohohohohoh
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +171,7 @@
 }
 
 body {
-    background: linear-gradient(to right, #121212, #000000);
+    background: linear-gradient(to right, #1c1c1c, #2b2b2b);
     color: #fff;
     font-size: 16px;
     line-height: 1.6;
@@ -14,49 +179,84 @@ body {
 
 .header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
-    background: #111;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    padding: 20px 50px;
+    background: #444;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .title {
-    font-size: 48px;
+    font-size: 36px;
     font-weight: bold;
-    color: #ff8a00;
-    text-shadow: 0 0 10px #ff8a00, 0 0 20px #ff8a00;
+    background: linear-gradient(to right, #7ab905, #7ab905);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: glow 1s ease-in-out infinite alternate;
 }
 
-.main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #7ab905, 0 0 20px #7ab905, 0 0 30px #7ab905, 0 0 40px #7ab905, 0 0 50px #7ab905, 0 0 60px #7ab905, 0 0 70px #7ab905;
+    }
+    to {
+        text-shadow: 0 0 20px #7ab905, 0 0 30px #7ab905, 0 0 40px #7ab905, 0 0 50px #7ab905, 0 0 60px #7ab905, 0 0 70px #7ab905, 0 0 80px #7ab905;
+    }
 }
 
-.buttons-container {
+.buttons-container-left {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    gap: 10px;
 }
 
 .btn {
-    padding: 15px 30px;
-    background: linear-gradient(to right, #ff8a00, #e52e71);
+    padding: 10px 20px;
+    background: linear-gradient(to right, #7ab905, #7ab905);
     color: #fff;
     border: none;
     cursor: pointer;
-    border-radius: 50px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
-    font-size: 20px;
 }
 
 .btn:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.search-container-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar {
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+    width: 200px;
+    transition: width 0.3s ease-in-out;
+}
+
+.search-bar:focus {
+    width: 300px;
+}
+
+.search-btn {
+    padding: 10px 20px;
+    background: linear-gradient(to right, #7ab905, #7ab905);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.search-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 .modal {
@@ -68,7 +268,7 @@ body {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0,0,0,0.8);
     backdrop-filter: blur(10px);
 }
 
@@ -83,47 +283,69 @@ body {
     animation: slide-down 0.5s ease-in-out;
 }
 
+@keyframes slide-down {
+    from {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .close {
     color: #aaa;
     float: right;
-    font-size: 36px;
+    font-size: 28px;
     font-weight: bold;
-    cursor: pointer;
 }
 
 .close:hover,
 .close:focus {
     color: #fff;
     text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.modal-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .item-box {
-    background-color: #222;
-    border: 2px solid #333;
+    border: 1px solid #555;
     border-radius: 10px;
     padding: 20px;
-    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
 }
 
 .item-box:hover {
     transform: translateY(-5px);
-    background: #444;
-}
-
-.item-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .item-name {
+    display: block;
     font-weight: bold;
     font-size: 18px;
+    margin-bottom: 10px;
 }
 
 .coin-value {
-    color: #ff8a00;
+    color: #7ab905;
     font-size: 16px;
 }
+message.txt
+4 KB
