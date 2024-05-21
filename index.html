@@ -10,13 +10,23 @@
 
 <div class="header">
     <div class="title">Islands Archive Price Guide</div>
+    <div class="buttons-container-left">
+        <button class="btn" onclick="openModal('crops')">Crops</button>
+        <button class="btn" onclick="openModal('blocks')">Blocks</button>
+        <button class="btn" onclick="openModal('totems')">Totems</button>
+        <button class="btn" onclick="openModal('industrial')">Industrial</button>
+        <button class="btn" onclick="openModal('stations')">Stations</button>
+        <button class="btn" onclick="openModal('cooking')">Cooking</button>
+        <button class="btn" onclick="openModal('seeds')">Seeds</button>
+        <button class="btn" onclick="openModal('slimeIsland')">Slime Island</button>
+        <button class="btn" onclick="openModal('tools')">Tools</button>
+        <button class="btn" onclick="openModal('ore')">Ore</button>
+    </div>
     <div class="search-container-right">
         <input type="text" id="searchInput" onkeyup="searchItems()" placeholder="Search for items..." class="search-bar">
         <button class="search-btn">Search</button>
     </div>
 </div>
-
-<div id="itemsContainer" class="items-container"></div>
 
 <div id="myModal" class="modal">
     <div class="modal-content">
