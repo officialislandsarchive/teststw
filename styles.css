@@ -119,12 +119,11 @@ body {
 
 .item-name {
     font-weight: bold;
-    font-size: 20px;
-    color: #ff8a00; /* Adjust the color */
+    font-size: 18px;
     margin-bottom: 10px;
 }
 
 .coin-value {
     color: #ff8a00;
-    font-size: 18px;
+    font-size: 16px;
 }
