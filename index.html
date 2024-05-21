@@ -9,15 +9,9 @@
 <body>
 
 <div class="header">
-    <div class="title">Islands Inventory Catalog</div>
-    <div class="search-container">
-        <input type="text" id="searchInput" onkeyup="searchItems()" placeholder="Search for items..." class="search-bar">
-        <button class="search-btn" onclick="searchItems()">Search</button>
-    </div>
-</div>
-
-<div class="main-content">
-<button class="btn" onclick="openModal('crops')">Crops</button>
+    <div class="title">Islands Archive Price Guide</div>
+    <div class="buttons-container-left">
+        <button class="btn" onclick="openModal('crops')">Crops</button>
 <button class="btn" onclick="openModal('blocks')">Blocks</button>
         <button class="btn" onclick="openModal('totems')">Totems</button>
         <button class="btn" onclick="openModal('industrial')">Industrial</button>
@@ -26,9 +20,9 @@
         <button class="btn" onclick="openModal('seeds')">Seeds</button>
         <button class="btn" onclick="openModal('slimeIsland')">Slime Island</button>
         <button class="btn" onclick="openModal('tools')">Tools</button>
-        <button class="btn" onclick="openModal('ore')">Ore</button>     <div class="section">
-        <h2 class="section-title">Featured Items</h2>
-        <div class="featured-items" id="featuredItems"></div>
+        <button class="btn" onclick="openModal('ore')">Ore</button>    </div>
+    <div class="search-container-right">
+        <input type="text" id="searchInput" onkeyup="searchItems()" placeholder="Search for items..." class="search-bar">
     </div>
 </div>
 
